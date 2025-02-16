@@ -1,0 +1,386 @@
+
+:root{
+    --cor0: #fff1d7;
+    --cor1: #f6f1de;
+    --cor2: #0c0ce94d;
+    --cor3: #6c63ff;
+    --cor4: #6b63fff1;
+
+    --font-poppins: "Poppins", serif;
+    --font-inter: "Inter", serif;
+
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--font-inter);
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cor2);
+}
+
+.container{
+    width: 80%;
+    height: 80vh;
+    display: flex;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .212);
+}
+
+.form-image{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cor1);
+    padding: 1rem;
+}
+
+.form-image img{
+    width: 31rem;
+}
+
+.form{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    padding: 3rem;
+}
+
+.form-header{
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.login-button{
+    display: flex;
+    align-items: center;
+}
+
+.login-button button{
+    border: none;
+    background-color: var(--cor3);
+    padding: 0.4rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-button button:hover{
+    background-color: var(--cor4);
+}
+
+.login-button a{
+    text-decoration: none;
+    font-weight: 500;
+    color: white;
+}
+
+
+.form-header h1::after{
+    content: '';
+    display: block;
+    width: 5rem;
+    height: 0.3rem;
+    background-color: var(--cor3);
+    margin: 0 auto;
+    position: absolute;
+    border-radius: 10px;
+}
+
+.input-group{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+
+.input-box{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.1rem;
+}
+
+.input-box input{
+    margin: 0.6rem 0;
+    padding: 0.8rem 0;
+    border: none;
+    border-radius: 10px;
+   box-shadow: 1px 1px 6px rgba(142, 142, 142, 0.585);
+}
+
+.input-box input:hover{
+    background-color: #eeeeee75;
+}
+
+.input-box input:focus-visible{
+    outline: 1px solid var(--cor3);
+}
+
+.input-box input::placeholder{
+    color: #000000b3;
+}
+
+.input-box label, .gender-title h6{
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #000000c0;
+}
+
+.gender-group{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.62rem;
+    padding: 0 0.5rem;
+}
+
+.gender-input{
+    display: flex;
+    align-items: center;
+}
+
+.gender-input input{
+    margin-right: 0.35rem;
+}
+
+.gender-input label{
+    font-size: 0.81rem;
+    font-weight: 600;
+    color: #000000c0;
+}
+
+.continue-button button{
+    width: 100%;
+    margin-top: 2.5rem;
+    margin-bottom: 2rem;
+    border: none;
+    background-color: var(--cor3);
+    padding: 0.62rem;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    font-size: 0.93rem;
+    font-weight: 500;
+}
+
+.continue-button button:hover{
+    background-color: var(--cor4);
+}
+
+/* Telas grandes (Acima de 1330px) */
+@media screen and (max-width: 1330px) {
+    .form-image {
+        display: none;
+    }
+
+    .container {
+        width: 50%;
+        height: auto;
+    }
+
+    .form {
+        width: 100%;
+    }
+}
+
+/* Notebooks e tablets grandes (Até 1024px) */
+@media screen and (max-width: 1024px) {
+    .container {
+        width: 80%;
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem;
+    }
+
+    .form {
+        width: 100%;
+        max-width: 500px;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .input-group {
+        width: 100%;
+    }
+
+    .input-box {
+        width: 100%;
+    }
+}
+
+/* Tablets pequenos (Até 768px) */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 2rem;
+    }
+
+    .form-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center; /* Garante que o título fique centralizado */
+        text-align: center;
+        padding: 0 1rem;
+    }
+
+    .form-header h1 {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+        max-width: 100%; /* Garante que o título ocupe o máximo de espaço */
+        word-wrap: break-word; /* Evita que o título quebre o layout */
+    }
+
+    .login-button {
+        margin-top: 0.5rem;
+    }
+
+    .input-group {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .input-box {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .input-box input {
+        width: 100%;
+        padding: 0.8rem;
+    }
+
+    .continue-button {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .continue-button button {
+        width: 100%;
+        font-size: 1rem;
+        padding: 0.8rem;
+    }
+}
+
+/* Ajustes para a faixa de 496x765 até 933x765 */
+@media screen and (min-width: 496px) and (max-width: 933px) {
+    .form-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start; /* Centraliza o título na parte superior */
+        padding: 0 1rem;
+    }
+
+    .form-header h1 {
+        font-size: 2rem; /* Tamanho maior para mais visibilidade */
+        margin-bottom: 1rem;
+        text-align: center;
+        padding-top: 1rem; /* Garante que o título não fique muito próximo do topo */
+        max-width: 100%;
+        word-wrap: break-word;
+    }
+
+    .container {
+        width: 85%; /* Ajuste para garantir que o conteúdo tenha espaço */
+    }
+
+    .form {
+        padding: 2rem;
+    }
+}
+
+/* Celulares (Até 480px) */
+@media screen and (max-width: 480px) {
+    body {
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        padding-top: 2rem;
+    }
+
+    .container {
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 1.5rem;
+    }
+
+    .form {
+        width: 100%;
+        max-width: 400px;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .form-header {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    .form-header h1 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .login-button {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .input-group {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .input-box {
+        width: 100%;
+    }
+
+    .input-box input {
+        width: 100%;
+        padding: 0.6rem 0.9rem;
+        font-size: 0.9rem;
+    }
+
+    .continue-button {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .continue-button button {
+        width: 100%;
+        font-size: 1rem;
+        padding: 1rem;
+    }
+}
